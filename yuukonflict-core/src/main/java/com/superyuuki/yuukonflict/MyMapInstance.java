@@ -1,5 +1,7 @@
 package com.superyuuki.yuukonflict;
 
+import com.superyuuki.yuukonflict.world.MapInstance;
+
 public class MyMapInstance implements MapInstance {
 
     private final Loc bottomCorner;
