@@ -15,14 +15,12 @@ public class MyComposer implements Composer {
     }
 
     @Override
-    public <T extends Trait> Optional<T> make(Class<T> type, Dispatcher dispatcher) {
+    public <T extends Trait> T make(Class<T> type, Dispatcher dispatcher) {
         var ctor = map.get(type);
-        if (ctor == null) return Optional.empty();
+        if (ctor == null) throw new IllegalStateException("No composer exists for type: " + type.getCanonicalName());
 
-        return Optional.of(
-                type.cast(
-                        ctor.make(dispatcher)
-                )
+        return type.cast(
+                ctor.make(dispatcher)
         );
     }
 }

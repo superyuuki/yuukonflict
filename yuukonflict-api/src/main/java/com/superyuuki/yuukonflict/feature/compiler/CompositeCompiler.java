@@ -1,6 +1,6 @@
 package com.superyuuki.yuukonflict.feature.compiler;
 
-import com.superyuuki.yuukonflict.feature.Conduit;
+import com.superyuuki.yuukonflict.feature.Dispatcher;
 import com.superyuuki.yuukonflict.feature.Trait;
 
 import java.util.ArrayList;
@@ -16,9 +16,9 @@ public class CompositeCompiler implements Compiler {
     }
 
     @Override
-    public Optional<Conduit> compile(Trait trait) {
+    public Optional<Dispatcher> compile(Trait trait) {
 
-        List<Conduit> conduits = new ArrayList<>();
+        List<Dispatcher> conduits = new ArrayList<>();
 
         for (Compiler compiler : compilers) {
             var opt = compiler.compile(trait);

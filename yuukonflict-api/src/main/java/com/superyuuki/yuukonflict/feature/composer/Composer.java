@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface Composer {
 
-    <T extends Trait> Optional<T> make(Class<T> type, Dispatcher dispatcher);
+    <T extends Trait> T make(Class<T> type, Dispatcher dispatcher);
 
 }
