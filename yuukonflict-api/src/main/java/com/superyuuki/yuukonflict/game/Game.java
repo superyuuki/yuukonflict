@@ -1,10 +1,10 @@
 package com.superyuuki.yuukonflict.game;
 
 import com.superyuuki.yuukonflict.feature.Dispatcher;
-import com.superyuuki.yuukonflict.game.phase.Phase;
+import com.superyuuki.yuukonflict.newtype.Phase;
 
 public interface Game extends Dispatcher {
 
-    void nextPhase(Phase phase);
+    void phase(Phase phase);
 
 }

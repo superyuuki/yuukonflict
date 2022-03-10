@@ -33,4 +33,15 @@
         <maven.compiler.target>${compiler.version}</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>yuuki-releases</id>
+            <url>https://repo.superyuuki.com/releases</url>
+        </repository>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
 </project>
